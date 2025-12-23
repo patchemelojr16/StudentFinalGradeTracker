@@ -1,4 +1,4 @@
-	#include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -50,7 +50,9 @@ int main() {
     int choice, year;
     float pass, password,user, username;
     string name,name2,block;
+    bool LogIn = false;
     
+    cout << "=========== FILL UP FIRST ==========" << endl;
     cout << "\nEnter your name: ";
     getline (cin,name);
     cout << "Enter your instructor name: ";
@@ -68,23 +70,27 @@ int main() {
     cout << "Date        : " << "December 15, 2025 " << endl;
     cout << "------------------------------------" << endl;
     
-    cout << "Enter your username: ";
+    cout << "\n------------------------------------" << endl;
+    
+    cout << "\nEnter your username: ";
     cin >> user;
     cout << "Enter your password: ";
     cin >> pass;
     
-    for (int i = 0; i <= 3; i++) {
+    for (int i = 1; i <= 3; i++) {
         cout << "Enter your setUsername: ";
         cin >> username;
         cout << "Enter your SetPassword: ";
         cin >> password;
         
-        if (pass == password || user == username) {
-            cout << "\nLog-in successfully!!" << endl;
+        if (pass == password && user == username) {
+             bool LogIn = true;
+            cout << "\n===== Log-in successfully!! =====\n" << endl;
+        
             break;
             
         } else {
-            cout << "Sorry log-in failed..pleaseee try again!!" << endl;
+            cout << "\n=== Sorry log-in failed..pleaseee try== again!! =====\n" << endl;
         }
     }
     
@@ -107,4 +113,3 @@ int main() {
 
     return 0;
 }
-
